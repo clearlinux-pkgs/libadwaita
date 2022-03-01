@@ -4,11 +4,9 @@
 #
 Name     : libadwaita
 Version  : 1.0.2
-Release  : 3
-URL      : https://gitlab.gnome.org/GNOME/libadwaita/-/archive/1.0.2/libadwaita-1.0.2.tar.gz
-Source0  : https://gitlab.gnome.org/GNOME/libadwaita/-/archive/1.0.2/libadwaita-1.0.2.tar.gz
-Source1  : https://gitlab.gnome.org/GNOME/libadwaita/-/archive/1.0.1/libadwaita-1.0.1.tar.gz
-Source2  : https://gitlab.gnome.org/GNOME/libadwaita/-/archive/main/libadwaita-main.tar.gz
+Release  : 4
+URL      : https://download.gnome.org/sources/libadwaita/1.0/libadwaita-1.0.2.tar.xz
+Source0  : https://download.gnome.org/sources/libadwaita/1.0/libadwaita-1.0.2.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -88,17 +86,13 @@ locales components for the libadwaita package.
 %prep
 %setup -q -n libadwaita-1.0.2
 cd %{_builddir}/libadwaita-1.0.2
-cd ..
-%setup -q -T -n libadwaita-main -b 2
-cd ..
-%setup -q -T -n libadwaita-1.0.1 -b 1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1644595590
+export SOURCE_DATE_EPOCH=1646093719
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -119,9 +113,7 @@ meson test -C builddir --print-errorlogs || :
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/libadwaita
-cp %{_builddir}/libadwaita-1.0.1/COPYING %{buildroot}/usr/share/package-licenses/libadwaita/01a6b4bf79aca9b556822601186afab86e8c4fbf
 cp %{_builddir}/libadwaita-1.0.2/COPYING %{buildroot}/usr/share/package-licenses/libadwaita/01a6b4bf79aca9b556822601186afab86e8c4fbf
-cp %{_builddir}/libadwaita-main/COPYING %{buildroot}/usr/share/package-licenses/libadwaita/01a6b4bf79aca9b556822601186afab86e8c4fbf
 DESTDIR=%{buildroot} ninja -C builddir install
 %find_lang libadwaita
 
