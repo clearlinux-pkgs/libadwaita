@@ -1,9 +1,31 @@
 =============
-Version 1.1.5
+Version 1.2.0
 =============
 
+- Docs
+  - Fix @card_shade_color description
+  - Fix a typo in AdwTabView docs
+  - Fix AdwMessageDialog example
+- Translation updates
+  - Bulgarian
+  - Croatian
+  - Czech
+  - German
+  - Hungarian
+  - Occitan
+  - Slovenian
+
+==============
+Version 1.2.rc
+==============
+
+- Ensure setter documentation is consistent with their properties
+- Demo
+  - Fix a critical when toggling tab indicators
 - AdwCarousel
   - Fix a crash when removing a child while it's animating
+- AdwMessageDialog
+  - Use maximum width when no parent is set, instead of minimum
 - AdwSqueezer
   - Sizing fixes
 - AdwTabBar
@@ -11,82 +33,218 @@ Version 1.1.5
   - Fix a crash when clicking empty space while a tab is animating
 - AdwTabView
   - Fix set_menu_model() input check
+- AdwWindow
+  - Clarify docs around child/content properties
+- Stylesheet
+  - Fix AdwSplitButton disabled state
+  - Fix focus transitions
+  - Fix GtkColorScale slider
+  - Fix AdwViewSwitcher needs-attention dot color
+- Translation updates
+  - Abkhazian
+  - Basque
+  - Brazilian Portuguese
+  - Catalan
+  - Chinese (China)
+  - Croatian
+  - Danish
+  - Dutch
+  - Finnish
+  - Galician
+  - Georgian
+  - Indonesian
+  - Korean
+  - Persian
+  - Polish
+  - Serbian
+  - Spanish
+  - Swedish
+  - Turkish
 
-=============
-Version 1.1.4
-=============
+================
+Version 1.2.beta
+================
 
+- Fix deprecations with newer GLib
+- Fix strict aliasing warnings
+- Fix GLSL shader compile errors on certain systems
+- AdwAboutWindow
+  - Fix a random crash when closing
+  - Rework the flat header bar layout
+  - Properly mark as final class
 - AdwAvatar
   - Fix draw_to_texture() with rectangular avatars
-- AdwTabBar
-  - Fix squished or clipped text with gtk-hint-font-metrics=0
+- AdwEntryRow
+  - Add entry-activated signal
+  - Add attributes property
+  - Add activates-default property
+  - Don't select text when clicking the row
+- AdwMessageDialog
+  - Fix crash when destroying the parent before the dialog
 - AdwShadowHelper
   - Fix warnings when drawing vertical shadow
+- AdwSplitButton
+  - Add dropdown-tooltip property
 - AdwSwipeTracker
   - Fix swipe speed on GTK 4.7.x
   - Fix criticals with GTK 4.7.x
+- AdwTabBar
+  - Remove tab background when there's only one tab
+  - Add a tooltip for close buttons
+  - Fix squished or clipped text with gtk-hint-font-metrics=0
+  - Fix scrolling to a tab with disabled animations
+  - Fix assorted tab reordering issues
+- AdwTabView
+  - Add shortcut management API
+  - Add AdwTabPage:indicator-tooltip property
+  - Handle shortcuts on CAPTURE phase
+  - Shortcut propagation and bell fixes
+- AdwToast
+  - Add button-clicked signal
+- AdwViewStack
+  - Add adw_view_stack_add_titled_with_icon()
+- Demo
+  - Prefer properties over <child> in UI files
+  - Don't explicilty add GtkViewport to GtkScrolledWindow
+  - Stop using .inline-toolbar
+  - Fix build on Windows
+- Stylesheet
+  - Unify @view_fg_color with other foreground colors
+  - Improve contrast of @success_color and @warning_color
+  - Fix infobar margins and spacing
+  - Partially support .navigation-sidebar with GtkTreeView
+  - Move GtkScale focus onto its slider
+  - Ensure consistant GtkScale size when using marks
+  - Remove unnecessary transitions
+- Translation updates
+  - Abkhazian
+  - Basque
+  - Catalan
+  - Galician
+  - Georgian
+  - Hebrew
+  - Indonesian
+  - Lithuanian
+  - Occitan
+  - Portuguese
+  - Russian
+  - Turkish
+  - Ukrainian
 
-=============
-Version 1.1.3
-=============
+=================
+Version 1.2.alpha
+=================
 
+- Introduce AdwAboutWindow
+- Introduce AdwEntryRow and AdwPasswordEntryRow
+- Introduce AdwMessageDialog
+- Introduce AdwPropertyAnimationTarget
+- AdwAnimation
+  - Add adw_animation_set_target()
+- AdwCallbackAnimationTarget
+  - Fix callback annotations
+- AdwActionRow
+  - Set a11y relations for the activatable widget
+  - Tweak spacing to match toolbars and AdwEntryRow
+- AdwAvatar
+  - Fix initials not updating after setting custom-image
+- AdwComboRow
+  - Add an example to docs
+- AdwExpanderRow
+  - Change arrow orientation to make it look less similar
+    to action rows that open subpages
 - AdwLeaflet
+  - Fix child sizing with fold-threshold-policy=natural
+  - Clip child during transitions, preventing glitchy header bar borders
+  - Check direction argument in navigate()
   - Fix a broken link in docs
 - AdwPreferencesGroup
   - Fix accessibility labels
-- AdwToast
-  - Fix the example in docs
-- Stylesheet
-  - Add missing borders in high contrast version
-
-=============
-Version 1.1.2
-=============
-
-- AdwLeaflet
-  - Fix child sizing with fold-threshold-policy=natural
+  - Annotation fixes
+- AdwPreferencesRow
+  - Add use-markup property
+  - Annotation fixes
+- AdwSplitButton
+  - Avoid state changes during dispose
 - AdwStyleManager
+  - Fix high contrast setting name when using a portal
   - Correctly handle removing a GdkDisplay
+  - Add environment variables to control styles from Builder
 - AdwSwipeTracker
   - Fix a memory leak
-  - Fix high contrast setting name when using a portal
-- AdwTabBar
-  - Fix middle click when inside GtkWindowHandle
-- Stylesheet
-  - Fix action row title and subtitle inside GtkHeaderBar
-  - Fix progressbar.osd overriding text color
-  - Ensure active states consistently work with touchscreens
-  - Fix GtkDropDown visual glitch when pressed on touchscreen
-- Translation updates:
-  - Chinese (Taiwan)
-  - Nepali
-
-=============
-Version 1.1.1
-=============
-
-- AdwAvatar
-  - Fix initials not updating after setting custom-image
-- AdwSplitButton:
-  - Avoid state changes during dispose
-- AdwViewSwitcherTitle
-  - Clear pending idle callback on unrealize
-- AdwPreferencesGroup
-  - Annotation fixes
-- AdwPreferencesGroup
-  - Annotation fixes
 - AdwTabBar
   - Ensure indicators are clickable with inverted=true
   - Fix resize deferring with non-expanded tabs
   - Fix scroll animation stopping too early
-- Mention AdwComboRow:selected type in migration guide
+  - Fix middle click when inside GtkWindowHandle
+  - Refresh style
+    - Use a button-like style for tabs, ensure visibility in dark variant
+    - Add spacing between and around tabs and action widgets
+    - Use real widgets for separators instead of borders
+    - Replace shade gradients with opacity fading
+    - Replace needs-attention glow with a line
+    - Add backdrop style matching header bars
+    - Use :selected state for selected tab instead of :checked
+- AdwToast
+  - Add custom-title property
+  - Add adw_toast_new_format()
+  - Allow dismiss() to be called multiple times
+  - Fix the example in docs
+- AdwToastOverlay
+  - Allow add_toast() to be called multiple times to extend the timeout
+  - Make toasts without button narrower
+- AdwViewSwitcherTitle
+  - Clear pending idle callback on unrealize
+- Stylesheet
+  - Deprecate the .large-title style class
+  - Add @dialog_bg_color and @dialog_fg_color for AdwMessageDialog
+  - Add backdrop styles for GtkSearchBar and GtkActionBar
+  - Update GtkColorScale style, following GTK
+  - Add missing borders in high contrast version
+  - Style GtkActionBar like header bars and similar widgets
+  - Use shade colors as borders for header bars and similar widgets
+  - Use shade colors as boxed list rows borders
+  - Remove border from leaflet/flap transition shadow
+  - Slightly tone down window outline
+  - Dim GtkPlacesSidebar unmount buttons to match icons
+  - Ensure active states consistently work with touchscreens
+  - Make GtkComboBox and GtkDropDown less likely to stretch vertically
+  - Fix GtkDropDown visual glitch when pressed on touchscreen
+  - Fix progressbar.osd overriding text color
+  - Fix action row title and subtitle inside GtkHeaderBar
+- Docs
+  - Mention AdwComboRow:selected type in migration guide
+  - Update *_shade color descriptions
+  - Make screenshot tool buildable with MSVC
+  - Disable animations before taking screenshots
+- Remove property nicks and blurbs
+- Make property flags consistent
+- Fix symbols added in 1.1 being erroneously marked as 1.0
 - Fix a Meson error when using as a subproject
-- Translation updates:
-  - Abkhazian
+- Various internal changes and cleanups
+Translation updates:
+  - Basque
+  - Brazilian Portuguese
   - British English
   - Bulgarian
   - Catalan
+  - Chinese (China)
+  - Chinese (Taiwan)
   - Dutch
+  - French
+  - Galician
+  - Georgian
+  - German
+  - Hebrew
+  - Lithuanian
+  - Nepali
+  - Persian
+  - Portuguese
+  - Russian
+  - Spanish
+  - Swedish
+  - Turkish
+  - Ukrainian
 
 =============
 Version 1.1.0
