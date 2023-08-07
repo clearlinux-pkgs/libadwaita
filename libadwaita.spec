@@ -4,10 +4,10 @@
 # Using build pattern: meson
 #
 Name     : libadwaita
-Version  : 1.3.3
-Release  : 21
-URL      : https://download.gnome.org/sources/libadwaita/1.3/libadwaita-1.3.3.tar.xz
-Source0  : https://download.gnome.org/sources/libadwaita/1.3/libadwaita-1.3.3.tar.xz
+Version  : 1.3.4
+Release  : 22
+URL      : https://download.gnome.org/sources/libadwaita/1.3/libadwaita-1.3.4.tar.xz
+Source0  : https://download.gnome.org/sources/libadwaita/1.3/libadwaita-1.3.4.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -87,10 +87,10 @@ locales components for the libadwaita package.
 
 
 %prep
-%setup -q -n libadwaita-1.3.3
-cd %{_builddir}/libadwaita-1.3.3
+%setup -q -n libadwaita-1.3.4
+cd %{_builddir}/libadwaita-1.3.4
 pushd ..
-cp -a libadwaita-1.3.3 buildavx2
+cp -a libadwaita-1.3.4 buildavx2
 popd
 
 %build
@@ -98,7 +98,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1686339205
+export SOURCE_DATE_EPOCH=1691425854
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
