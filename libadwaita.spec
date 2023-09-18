@@ -4,10 +4,10 @@
 # Using build pattern: meson
 #
 Name     : libadwaita
-Version  : 1.3.5
-Release  : 23
-URL      : https://download.gnome.org/sources/libadwaita/1.3/libadwaita-1.3.5.tar.xz
-Source0  : https://download.gnome.org/sources/libadwaita/1.3/libadwaita-1.3.5.tar.xz
+Version  : 1.4.0
+Release  : 24
+URL      : https://download.gnome.org/sources/libadwaita/1.4/libadwaita-1.4.0.tar.xz
+Source0  : https://download.gnome.org/sources/libadwaita/1.4/libadwaita-1.4.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -16,9 +16,9 @@ Requires: libadwaita-data = %{version}-%{release}
 Requires: libadwaita-lib = %{version}-%{release}
 Requires: libadwaita-license = %{version}-%{release}
 Requires: libadwaita-locales = %{version}-%{release}
-BuildRequires : appstream-glib
 BuildRequires : buildreq-gnome
 BuildRequires : buildreq-meson
+BuildRequires : pkgconfig(appstream)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -87,10 +87,10 @@ locales components for the libadwaita package.
 
 
 %prep
-%setup -q -n libadwaita-1.3.5
-cd %{_builddir}/libadwaita-1.3.5
+%setup -q -n libadwaita-1.4.0
+cd %{_builddir}/libadwaita-1.4.0
 pushd ..
-cp -a libadwaita-1.3.5 buildavx2
+cp -a libadwaita-1.4.0 buildavx2
 popd
 
 %build
@@ -98,7 +98,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1693927112
+export SOURCE_DATE_EPOCH=1695052208
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -158,6 +158,8 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/include/libadwaita-1/adw-avatar.h
 /usr/include/libadwaita-1/adw-banner.h
 /usr/include/libadwaita-1/adw-bin.h
+/usr/include/libadwaita-1/adw-breakpoint-bin.h
+/usr/include/libadwaita-1/adw-breakpoint.h
 /usr/include/libadwaita-1/adw-button-content.h
 /usr/include/libadwaita-1/adw-carousel-indicator-dots.h
 /usr/include/libadwaita-1/adw-carousel-indicator-lines.h
@@ -175,14 +177,19 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/include/libadwaita-1/adw-fold-threshold-policy.h
 /usr/include/libadwaita-1/adw-header-bar.h
 /usr/include/libadwaita-1/adw-leaflet.h
+/usr/include/libadwaita-1/adw-length-unit.h
 /usr/include/libadwaita-1/adw-main.h
 /usr/include/libadwaita-1/adw-message-dialog.h
 /usr/include/libadwaita-1/adw-navigation-direction.h
+/usr/include/libadwaita-1/adw-navigation-split-view.h
+/usr/include/libadwaita-1/adw-navigation-view.h
+/usr/include/libadwaita-1/adw-overlay-split-view.h
 /usr/include/libadwaita-1/adw-password-entry-row.h
 /usr/include/libadwaita-1/adw-preferences-group.h
 /usr/include/libadwaita-1/adw-preferences-page.h
 /usr/include/libadwaita-1/adw-preferences-row.h
 /usr/include/libadwaita-1/adw-preferences-window.h
+/usr/include/libadwaita-1/adw-spin-row.h
 /usr/include/libadwaita-1/adw-split-button.h
 /usr/include/libadwaita-1/adw-spring-animation.h
 /usr/include/libadwaita-1/adw-spring-params.h
@@ -191,6 +198,7 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/include/libadwaita-1/adw-style-manager.h
 /usr/include/libadwaita-1/adw-swipe-tracker.h
 /usr/include/libadwaita-1/adw-swipeable.h
+/usr/include/libadwaita-1/adw-switch-row.h
 /usr/include/libadwaita-1/adw-tab-bar.h
 /usr/include/libadwaita-1/adw-tab-button.h
 /usr/include/libadwaita-1/adw-tab-overview.h
@@ -198,6 +206,7 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/include/libadwaita-1/adw-timed-animation.h
 /usr/include/libadwaita-1/adw-toast-overlay.h
 /usr/include/libadwaita-1/adw-toast.h
+/usr/include/libadwaita-1/adw-toolbar-view.h
 /usr/include/libadwaita-1/adw-version.h
 /usr/include/libadwaita-1/adw-view-stack.h
 /usr/include/libadwaita-1/adw-view-switcher-bar.h
