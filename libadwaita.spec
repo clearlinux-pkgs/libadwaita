@@ -7,7 +7,7 @@
 #
 Name     : libadwaita
 Version  : 1.4.2
-Release  : 26
+Release  : 27
 URL      : https://download.gnome.org/sources/libadwaita/1.4/libadwaita-1.4.2.tar.xz
 Source0  : https://download.gnome.org/sources/libadwaita/1.4/libadwaita-1.4.2.tar.xz
 Summary  : No detailed summary available
