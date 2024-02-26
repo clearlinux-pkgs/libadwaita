@@ -7,7 +7,7 @@
 #
 Name     : libadwaita
 Version  : 1.4.3
-Release  : 28
+Release  : 29
 URL      : https://download.gnome.org/sources/libadwaita/1.4/libadwaita-1.4.3.tar.xz
 Source0  : https://download.gnome.org/sources/libadwaita/1.4/libadwaita-1.4.3.tar.xz
 Summary  : No detailed summary available
