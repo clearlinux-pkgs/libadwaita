@@ -1,63 +1,164 @@
 =============
-Version 1.4.4
+Version 1.5.0
 =============
 
+- AdwDialog
+  - Fix widget selection in inspector when presented as a bottom sheet
+  - Fix clicks on the dimming still working with can-closed=true
+- Demo
+  - Fix <developer> in metainfo
+- Translation updates
+  - Belarusian
+  - Brazilian Portuguese
+  - Danish
+  - French
+  - Galician
+  - Hungarian
+  - Italian
+  - Kabyle
+  - Kazakh
+  - Latvian
+  - Norwegian Bokmål
+  - Occitan
+  - Slovenian
+  - Swedish
+  - Turkish
+
+==============
+Version 1.5.rc
+==============
+
+
+- Depend on GTK 4.13.4
 - Fix layout with GtkSettings:gtk-xft-dpi == 0
+- AdwAboutDialog
+  - Support zero-clause bsd license
+  - Fix example
+- AdwAboutWindow
+  - Support zero-clause bsd license
+- AdwDialog
+  - Allow bottom sheets to shrink beyond 360px width
+  - Fix a crash when swiping on the dimming
+  - Adjust dimming intensity
 - AdwNavigationView
   - Fix signal mentions in push() docs
+  - Disable missing title warning when containing a split view
 - AdwStatusPage
   - Fix property notification in set_child()
+- AdwSwipeTracker
+  - Use a smaller threshold for window handles
 - AdwToolbarView
   - Fix a typo in docs
+- Demo
+  - Fix window.devel demo
+- Stylesheet
+  - Adjust shade colors in dark
+  - Make .devel not propagate to dialogs
+
+
 - Translation updates
-  - British English
+  - Basque
+  - Belarusian
+  - Catalan
+  - Chinese (China)
+  - Chinese (Taiwan)
+  - Czech
+  - Dutch
+  - Finnish
+  - French
+  - Georgian
+  - Hebrew
+  - Hungarian
+  - Indonesian
+  - Kazakh
+  - Korean
+  - Latvian
+  - Lithuanian
+  - Norwegian Bokmål
+  - Occitan
+  - Persian
+  - Polish
+  - Russian
+  - Spanish
+  - Swedish
+  - Ukrainian
 
-=============
-Version 1.4.3
-=============
+================
+Version 1.5.beta
+================
 
+- Fix build with libappstream 1.0
+- Fix deprecation warning with libappstream 0.16.4
+- Fix a build error with MSVC
+- Add AdwDialog, AdwAlertDialog, AdwPreferencesDialog and AdwAboutDialog
 - AdwAboutWindow
   - Don't pre-select the first section on the Legal page
-- AdwHeaderBar
-  - Fix visibility after changing :show-back-button
-- AdwPreferencesWindow
-  - Fix :visible-page and :visible-page-name docs
-- AdwViewSwitcherBar
-  - Fix a warning when empty
-- Translation updates
-  - French
-  - Greek
-  - Norwegian Bokmål
-
-=============
-Version 1.4.2
-=============
-
-- Really fix build with libappstream 1.0
-
-=============
-Version 1.4.1
-=============
-
-- Fix build with MSVC
-- Fix build with libappstream 1.0
+- AdwApplicationWindow
+  - Add :dialogs and :visible-dialog
+- AdwBreakpointBin
+  - Add remove_breakpoint()
+  - Fix focus during transitions
+  - Fix swapping the child during transitions
+- AdwButtonContent
+  - Horizontally center children
 - AdwCarousel
   - Fix carousel scroll behavior with page reordering
 - AdwComboRow
+  - Don't change selection on filtering
   - Fix focus when opening the popover
   - Set the correct state on the selected checkmark
+- AdwEntryRow
+  - Add :text-length
+- AdwHeaderBar
+  - Integrate with AdwDialog
+  - Fix visibility after changing :show-back-button
+- AdwMessageDialog
+  - Add remove_response()
+  - Fix choose() annotations
 - AdwNavigationView
   - Fix a warning message
+- AdwPreferencesWindow
+  - Fix :visible-page and :visible-page-name docs
+- AdwStyleManager
+  - Support contrast setting in the settings portal
+- AdwSwipeTracker
+  - Add :allow-window-handle
 - AdwTabOverview
   - Allow child focus on out animations
 - AdwTabView
   - Keep view alive during ::page-detached
   - Fix crashes when using :pages
+- AdwViewSwitcherBar
+  - Fix a warning when empty
+- AdwWindow
+  - Add :dialogs and :visible-dialog
+- Demo
+  - Port everything to AdwDialog
 - Docs
+  - Add a migration guide for adaptive dialogs
+  - Add a favicon
+  - Use the new asides
   - Fix erroneous <child> use in breakpoints migration guide
+- Stylesheet
+  - Increase GtkSwitch padding
+  - Align property row title and other row subtitle sizes
+  - Align expander row and combo row arrows
+  - Stop hiding switch shapes
 - Translation updates
+  - Czech
+  - French
+  - Galician
+  - German
+  - Greek
+  - Hebrew
+  - Hungarian
+  - Norwegian Bokmål
+  - Persian
   - Russian
   - Serbian
+  - Slovenian
+  - Turkish
+  - Ukrainian
 
 =============
 Version 1.4.0
