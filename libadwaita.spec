@@ -7,7 +7,7 @@
 #
 Name     : libadwaita
 Version  : 1.5.0
-Release  : 31
+Release  : 32
 URL      : https://download.gnome.org/sources/libadwaita/1.5/libadwaita-1.5.0.tar.xz
 Source0  : https://download.gnome.org/sources/libadwaita/1.5/libadwaita-1.5.0.tar.xz
 Summary  : No detailed summary available
