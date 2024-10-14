@@ -1100,6 +1100,7 @@ libadwaita-1-internal.so.0:adw_tab_button_get_type@@LIBADWAITA_1_0
 libadwaita-1-internal.so.0:adw_tab_button_get_view@@LIBADWAITA_1_0
 libadwaita-1-internal.so.0:adw_tab_button_new@@LIBADWAITA_1_0
 libadwaita-1-internal.so.0:adw_tab_button_set_view@@LIBADWAITA_1_0
+libadwaita-1-internal.so.0:adw_tab_can_click_at@@LIBADWAITA_1_0
 libadwaita-1-internal.so.0:adw_tab_get_dragging@@LIBADWAITA_1_0
 libadwaita-1-internal.so.0:adw_tab_get_inverted@@LIBADWAITA_1_0
 libadwaita-1-internal.so.0:adw_tab_get_page@@LIBADWAITA_1_0
