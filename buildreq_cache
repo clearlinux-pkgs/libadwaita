@@ -1,3 +1,4 @@
-1.6.4
+1.7.0
 pkgconfig(appstream)
+pkgconfig(gtk4)
 sassc
