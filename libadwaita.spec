@@ -7,7 +7,7 @@
 #
 Name     : libadwaita
 Version  : 1.7.2
-Release  : 44
+Release  : 45
 URL      : https://download.gnome.org/sources/libadwaita/1.7/libadwaita-1.7.2.tar.xz
 Source0  : https://download.gnome.org/sources/libadwaita/1.7/libadwaita-1.7.2.tar.xz
 Summary  : No detailed summary available
